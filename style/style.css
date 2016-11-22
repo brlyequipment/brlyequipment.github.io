@@ -59,6 +59,7 @@ textarea:enter {
 }
 
 .forkit-curtain {
+  z-index: 1000;
 	text-align: center;
 	background: rgba( 0, 0, 0, 0.1 );
 }
@@ -78,8 +79,8 @@ textarea:enter {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: calc(.5 * 100vh);
-  width: calc(.6666 * 100vw);
+  height: 350px;
+  width: 850px;
   background-color: #777777;
 }
 
@@ -257,4 +258,44 @@ textarea:enter {
 
 .section-one {
   height: 1000px;
+}
+
+.Engineers {
+  height: 450px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 200;
+}
+
+.e-container {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.e-outer {
+  width: 220px;
+  height: 220px;
+  border-radius: 100%;
+  background-color: #222;
+}
+
+.e-inner {
+  transform: translate(10px, 10px);
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: #ededed;
+}
+
+.name {
+  padding-top: 15px;
+  color: #bf9a60;
+}
+
+.about {
+  padding-top: 20px;
+  width: 220px;
 }

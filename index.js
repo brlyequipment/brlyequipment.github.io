@@ -1,4 +1,4 @@
-
+var correct = false;
 
 
 $( document ).ready( () => {
@@ -130,9 +130,55 @@ $( document ).ready( () => {
 
   $('#gform').on('submit', function(e) {
 
+    if (correct == false) {
+      $('#submit-input').effect( "shake" );
+      $('#in-touch-content').text('You must submit a valid email.');
+      setTimeout(function () {
+        $('#in-touch-content').text('Submit your information and we will contact you with updates');
+        $('#in-touch-content').css({'color':'#222'});
+      }, 4000);
+      $('#in-touch-content').css({'color':'#FF5733'});
+      return false;
+    }
+
     $('#gform *').fadeOut(2000);
     $('#in-touch-content').text('Your submission has been processed...');
   });
+
+  $('.email-input').each(function() {
+   var elem = $(this);
+
+   // Save current value of element
+   elem.data('oldVal', elem.val());
+
+   // Look for changes in the value
+   elem.bind("propertychange change click keyup input paste", function(event){
+      // If value has changed...
+      if (elem.data('oldVal') != elem.val()) {
+       // Updated stored value
+       elem.data('oldVal', elem.val());
+
+       // Do action
+       let email = $(".email-input").val();
+       if (email == "") {
+         $(".email-input").css({"border": "none"});
+       }
+       else {
+         if (validateEmail(email)) {
+           //$(".email-input").text(email + " is valid :)");
+           $(".email-input").css({"border": "1px solid #18bc9c"});
+           correct = true;
+         } else {
+           //$(".email-input").text(email + " is not valid :(");
+           $(".email-input").css({"border": "1px solid #FF5733"});
+           correct = false;
+         }
+       }
+     }
+   });
+ });
+
+
 
 
 
@@ -162,3 +208,9 @@ $( document ).ready( () => {
     //.addScene(theater.replay)
 
 });
+
+
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
