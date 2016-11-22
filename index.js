@@ -129,9 +129,9 @@ $( document ).ready( () => {
 
 
   $('#gform').on('submit', function(e) {
-    
+
     $('#gform *').fadeOut(2000);
-    $('#gform').prepend('Your submission has been processed...');
+    $('#in-touch-content').text('Your submission has been processed...');
   });
 
 

@@ -130,6 +130,7 @@ textarea:enter {
   color: #9E9E9E;
 }
 #in-touch-content {
+  transition: 0.6s;
   padding-top: 10px;
   font-size: 16px;
   color: #222;
