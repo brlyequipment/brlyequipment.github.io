@@ -6,9 +6,10 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>BRLY Boards</title>
+		<title>BRLY Equipment</title>
 
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/forkit.css">
 
     <script type="text/javascript" src="./script/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="./script/lodash-core.js"></script>
@@ -17,9 +18,12 @@
     <script type="text/javascript" src="index.js"></script>
 
 
+    <script type="text/javascript">var submitted=false;</script>
+
 
   </head>
   <body>
+
     <div class="cover">
       <div id="particles-js">
         <img src="./assets/back.jpg" alt="background-image" id="background-img"/>
@@ -34,9 +38,61 @@
 
     </div>
 
+    <div class="forkit-curtain">
+      <div class="close-button"></div>
+      <div class="background-form">
+        <div class="background-left">
+          <div id="in-touch">Get notified</div>
+          <hr>
+          <svg version="1.1"  id="insta" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="108px" height="108.5px" viewBox="0 0 108 108.5" style="enable-background:new 0 0 108 108.5;" xml:space="preserve">
+            <a xlink:href="https://www.instagram.com/brlysnowboards/" target="_blank">
+              <rect style="fill-opacity:0;" height="108.5" width="108" y="0" x="0" rx="15"/>
+              <path id="insta-p" style="fill:#9E9E9E;" d="M81,0H27C12.1,0,0,12.1,0,27v54.5c0,14.9,12.1,27,27,27h54c14.9,0,27-12.1,27-27V27
+            	C108,12.1,95.9,0,81,0z M27,10h54c9.4,0,17,7.6,17,17v9.3H69.4c-4.2-3-9.3-4.8-14.8-4.8s-10.6,1.8-14.8,4.8H10V27
+            	C10,17.6,17.6,10,27,10z M65.2,57.2c0,5.9-4.8,10.6-10.6,10.6c-5.9,0-10.6-4.8-10.6-10.6c0-5.9,4.8-10.6,10.6-10.6
+            	C60.4,46.5,65.2,51.3,65.2,57.2z M81,98.5H27c-9.4,0-17-7.6-17-17V46.3h21.4c-1.6,3.3-2.4,7-2.4,10.9c0,14.1,11.5,25.6,25.6,25.6
+            	s25.6-11.5,25.6-25.6c0-3.9-0.9-7.6-2.4-10.9H98v35.2C98,90.9,90.4,98.5,81,98.5z"/>
+            </a>
+          </svg>
+
+          <svg version="1.1" id="facy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	        width="108px" height="108.5px" viewBox="0 0 108 108.5" style="enable-background:new 0 0 108 108.5;" xml:space="preserve">
+            <a xlink:href="#" target="_blank">
+              <rect style="fill-opacity:0;" height="108.5" width="108" y="0" x="0" rx="15"/>
+          	   <path id="facy-p" style="fill:#9E9E9E;" d="M108,18.1C108,8.6,99.5,0,90,0H18C8.5,0,0,8.6,0,18.1v72.3c0,9.5,8.5,18.1,18,18.1h36v-41H40.8V49.4
+          		H54v-7c0-12.1,9.1-23.1,20.3-23.1h14.6v18.1H74.3c-1.6,0-3.5,1.9-3.5,4.9v7.2h18v18.1h-18v41H90c9.5,0,18-8.6,18-18.1V18.1z
+          		 M108,18.1"/>
+            </a>
+          </svg>
 
 
-    <div class="Overview">
+        </div>
+        <div class="background-right">
+          <div id="in-touch-content">Submit your information and we will contact you with updates</div>
+          <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScdA-1KgqxEqEt7wdf0JLsuhfXu_5S4mnkT93_aEUt80J3WvQ/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
+            <input class="name-input" id="entry.2005620554" type="text" name="entry.2005620554" placeholder="Name">
+            <input class="email-input" id="entry.1045781291" type="text" name="entry.1045781291" placeholder="Email">
+            <textarea class="message-input" id="entry.839337160" type="text" name="entry.839337160" placeholder="Message"></textarea>
+            <button id="submit-input" type="submit" value="Submit">Submit</button>
+          </form>
+          <!-- <form method="POST" action="http://formspree.io/brlyequipment@gmail.com">
+            <input class="name-input" type="name" name="name" placeholder="Name">
+            <input class="email-input" type="email" name="email" placeholder="Email">
+            <textarea class="message-input" name="message" placeholder="Message"></textarea>
+            <button id="submit-input" type="submit" value="Submit">Submit</button>
+          </form> -->
+          <!-- <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { console.log('complete'); }"></iframe> -->
+        </div>
+      </div>
+    </div>
+    <!-- The ribbon -->
+    <a class="forkit" data-text="Coming Soon" data-text-detached="Drag  Me  Down >" href=""><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+
+
+
+
+    <!-- <div class="Overview">
       Overview
     </div>
 
@@ -46,10 +102,10 @@
 
     <div class="Style">
       Style
-    </div>
+    </div> -->
 
 
-
+    <script type="text/javascript" src="./script/forkit.js"></script>
 
   </body>
 </html>
