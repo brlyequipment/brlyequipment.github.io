@@ -1,7 +1,6 @@
 
 
 
-
 $( document ).ready( () => {
 
   particlesJS("particles-js", {
@@ -114,7 +113,26 @@ $( document ).ready( () => {
 
 
 
+  $('#insta').mouseover(() =>{
+    $('#insta-p').css({'fill':'#e95950'});
+  });
+  $('#insta').mouseleave(() =>{
+    $('#insta-p').css({'fill':'#9E9E9E'});
+  });
 
+  $('#facy').mouseover(() =>{
+    $('#facy-p').css({'fill':'#3b5998'});
+  });
+  $('#facy').mouseleave(() =>{
+    $('#facy-p').css({'fill':'#9E9E9E'});
+  });
+
+
+  $('#gform').on('submit', function(e) {
+    
+    $('#gform *').fadeOut(2000);
+    $('#gform').prepend('Your submission has been processed...');
+  });
 
 
 
