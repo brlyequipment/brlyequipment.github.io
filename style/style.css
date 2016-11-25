@@ -10,6 +10,12 @@ body {
   font-weight: 100px;
   background-color: #ededed;
   color: #222;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 h1 {
@@ -56,6 +62,10 @@ textarea:enter {
 	position: absolute;
 	bottom: 16px;
 	left: 20px;
+}
+
+.forkit {
+  z-index: 500;
 }
 
 .forkit-curtain {
